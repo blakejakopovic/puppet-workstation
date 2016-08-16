@@ -1,0 +1,5 @@
+fixtures:
+  repositories:
+    homebrew: "https://github.com/TheKevJames/puppet-homebrew"
+  symlinks:
+    workstation: "#{source_dir}"

@@ -1,0 +1,34 @@
+{
+  "name": "blakejakopovic-workstation",
+  "version": "0.1.0",
+  "author": "Blake Jakopovic",
+  "summary": "Puppet module for a developer focused workstation",
+  "license": "Apache-2.0",
+  "source": "https://github.com/blakejakopovic/puppet-workstation",
+  "project_page": "https://forge.puppetlabs.com/blakejakopovic/workstation",
+  "issues_url": "https://github.com/blakejakopovic/puppet-workstation/issues",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Archlinux"
+    },
+    {
+      "operatingsystem": "Darwin",
+      "operatingsystemrelease": [ "15.x" ]
+    }
+  ],
+  "dependencies": [
+    { "name": "puppetlabs-stdlib", "version_requirement": ">= 1.0.0" },
+    { "name": "thekevjames-homebrew", "version_requirement": "1.4.x" }
+  ],
+  "data_provider": null,
+  "requirements": [
+    {
+      "name": "pe",
+      "version_requirement": ">= 3.7.0"
+    },
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.4.0"
+    }
+  ]
+}

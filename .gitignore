@@ -1,0 +1,12 @@
+spec/fixtures
+.bundle/
+.vagrant
+*.swp
+log
+Gemfile.lock
+Puppetfile.lock
+.librarian/
+.tmp/
+spec/*acceptance*
+coverage*
+TODO
