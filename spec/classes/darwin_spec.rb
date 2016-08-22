@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'workstation::darwin' do
-  context 'using Darwin operation system' do 
+  context 'when running Darwin operation system' do 
     let(:facts) do
       { 
         :osfamily => 'Darwin',
@@ -34,7 +34,7 @@ describe 'workstation::darwin' do
     it { should contain_class('workstation::darwin::web_browsers') }
   end
   
-  context 'with an unsupported operating system' do
+  context 'when running an unsupported operating system' do
     let(:params) do
       { 
         :default_user => 'iamauser'

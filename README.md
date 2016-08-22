@@ -36,6 +36,18 @@ macOS requires the following to be installed:
 * [Homebrew](http://brew.sh)
 * Xcode Command Line Tools (`xcode-select --install`)
 
+Arch Linux requires:
+* [aurget](https://aur.archlinux.org/packages/aurget/)
+```
+cd /tmp
+curl -O https://aur.archlinux.org/cgit/aur.git/snapshot/aurget.tar.gz
+tar xzvf aurget.tar.gz
+chown -R nobody:nobody aurget
+cd aurget
+sudo -u nobody makepkg -s
+pacman -U aurget*.pkg.tar*
+```
+
 ### Beginning with workstation
 
 Install the puppet workstation module

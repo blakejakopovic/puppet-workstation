@@ -17,7 +17,7 @@ describe 'workstation' do
           'dotfiles_repo' => 'http_dotfiles_repo' ) }
   end
 
-  context 'with Arch Linux as operating system' do
+  context 'when running Arch Linux as operating system' do
     let(:facts) do
       { 
         :osfamily => 'Archlinux',
@@ -25,8 +25,7 @@ describe 'workstation' do
       }
     end
 
-    it { is_expected.to contain_class('workstation::arch').with(
-          'default_user'  => 'iamauser' ) }
+    it { is_expected.to contain_class('workstation::arch') }
     
     it { should contain_class('workstation::dotfiles').with(
           'dotfiles_repo' => 'http_dotfiles_repo' ) }
@@ -36,7 +35,7 @@ describe 'workstation' do
     it { should_not contain_class('workstation::darwin') }
   end
 
-  context 'with Darwin as operating system' do
+  context 'when running Darwin as operating system' do
     let(:facts) do 
     { 
       :osfamily => 'Darwin',

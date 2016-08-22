@@ -25,6 +25,6 @@ class workstation::arch::system {
 
   package { $aur:
     ensure   => installed,
-    provider => aurget,
+    provider => 'aur',
   }
 }

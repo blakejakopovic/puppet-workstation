@@ -46,8 +46,7 @@ class workstation (
     fail('default_user cannot be root user')
   }
 
-  user { 'default_user':
-    name       => $default_user,
+  user { $default_user:
     managehome => true,
   }
 
