@@ -33,6 +33,5 @@ class workstation::arch::terminal {
 
   package { $aur:
     ensure   => installed,
-    provider => 'aur',
   }
 }

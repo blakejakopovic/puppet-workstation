@@ -25,6 +25,5 @@ class workstation::arch::window_managers {
 
   package { $aur:
     ensure   => installed,
-    provider => 'aur',
   }
 }
