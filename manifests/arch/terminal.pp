@@ -28,7 +28,7 @@ class workstation::arch::terminal {
 
   $aur = [
     'base16-git',
-    'command-not-found'
+    'command-not-found',
   ]
 
   package { $aur:

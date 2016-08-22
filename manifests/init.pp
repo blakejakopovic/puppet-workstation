@@ -37,8 +37,8 @@
 
 class workstation (
 
-  $default_user,
-  $dotfiles_repo = false, # optional
+  $default_user  = $::workstation::default_user,
+  $dotfiles_repo = false,
 
 ) {
 

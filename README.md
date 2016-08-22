@@ -1,12 +1,15 @@
 # Puppet Workstation
 
-Automated workstation setup and configuration module for both Arch Linux, and macOS (Darwin) systems. It automatically manages common system packages, Python pip packages, Rubygems, and installs dotfiles.
+Automated workstation setup and configuration module for both Arch Linux, and macOS (Darwin) systems. It manages common system packages, Python pip packages, Rubygems, and installs user dotfiles.
 
 This module was designed to support standalone puppet compilations, where no Puppet master is required. However, there is no reason why it can't also be used by a Puppet master to keep systems in check.
 
+## NOTICE
+This is an early release. It is **not yet production ready**.
+
 ## Setup
 
-For macOS, this module requires installing the homebrew module
+For macOS, this module requires installing the `homebrew` module
 ```
 puppet module install thekevjames-homebrew
 ```
@@ -18,7 +21,7 @@ This module includes configuration, packages, and services including:
 * Filesystem Tools
 * Media Utilities
 * Monitoring Tools
-* Networking Utlities
+* Networking Utilities
 * Productivity 
 * Social
 * System
@@ -66,7 +69,7 @@ Note: For an existing system, it's advisable to use the `--noop --verbose` flags
 
 ## Limitations
 
-The module currently only supports Arch Linux, and macOS (Darwin); however other operating systems may be added without significant issues. One consideration is that both Arch Linux and OS X have their own package managers (pacman, and homebrew respectively), so there may be some code duplication or puppet selector usage.
+The module currently only supports Arch Linux, and macOS (Darwin); however other operating systems may be added without significant issues. One consideration is that both Arch Linux and OS X have their own package managers (Pacman, and Homebrew respectively), so there may be some code duplication or puppet selector usage.
 
 ## Development
 

@@ -1,6 +1,5 @@
 class workstation::pips {
 
-  # Installs using Python 3 pip
   $pips = [
     'flask',
     'obfsproxy',

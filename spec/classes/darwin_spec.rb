@@ -2,11 +2,19 @@ require 'spec_helper'
 
 describe 'workstation::darwin' do
   context 'using Darwin operation system' do 
-    let(:facts) { { :osfamily => 'Darwin',
-                    :operatingsystem => 'Darwin',
-                    :macosx_productversion_major => '10.7' } }
-    let(:params) { { 
-      :default_user => 'iamauser', } }
+    let(:facts) do
+      { 
+        :osfamily => 'Darwin',
+        :operatingsystem => 'Darwin',
+        :macosx_productversion_major => '10.7'
+      }
+    end
+
+    let(:params) do
+      { 
+        :default_user => 'iamauser'
+      }
+    end
 
     it { is_expected.to compile }
 
@@ -25,11 +33,21 @@ describe 'workstation::darwin' do
     it { should contain_class('workstation::darwin::utilities') }
     it { should contain_class('workstation::darwin::web_browsers') }
   end
-  context 'with unsupported operating system' do
-    let(:params) { { 
-      :default_user => 'iamauser', } }
-    let(:facts) { { :osfamily => 'bados',
-                    :operatingsystem => 'bados' } }
+  
+  context 'with an unsupported operating system' do
+    let(:params) do
+      { 
+        :default_user => 'iamauser'
+      }
+    end
+
+    let(:facts) do
+      { 
+        :osfamily => 'bados',
+        :operatingsystem => 'bados'
+      }
+    end
+
     it { should compile.and_raise_error(/unsupported/) }
   end
 end

@@ -8,5 +8,6 @@ Puppetfile.lock
 .librarian/
 .tmp/
 spec/*acceptance*
-coverage*
+coverage/
 TODO
+pkg/

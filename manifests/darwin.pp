@@ -8,7 +8,7 @@ class workstation::darwin (
     fail( "${::operatingsystem} is an unsupported operating system" )
   }
 
-  class { 'homebrew':
+  class { '::homebrew':
     user  => $default_user,
     group => 'admin',
   }
