@@ -14,6 +14,7 @@ class workstation::arch::social {
   ]
 
   package { $aur:
-    ensure => installed,
+    ensure   => installed,
+    provider => aur,
   }
 }

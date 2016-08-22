@@ -20,6 +20,7 @@ class workstation::dotfiles (
     command => "sudo -u ${default_user} git clone '${dotfiles_repo}' '${dotfile_path}'",
     path    => '/usr/bin:/bin',
     unless  => "test -d ${dotfile_path}",
+    require => User['default_user'],
     notify  => Exec['install-dotfiles'],
   }
 

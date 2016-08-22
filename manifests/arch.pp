@@ -1,19 +1,7 @@
-class workstation::arch (
-
-  $default_user,
-
-) {
+class workstation::arch {
 
   if $::operatingsystem != 'ArchLinux' {
     fail( "${::operatingsystem} is an unsupported operating system" )
-  }
-
-  class { 'workstation::arch::system':
-    default_user => $default_user,
-  }
-
-  class { 'workstation::arch::web_browsers':
-    default_user => $default_user,
   }
 
   include workstation::arch::developer
@@ -23,6 +11,8 @@ class workstation::arch (
   include workstation::arch::monitoring
   include workstation::arch::networking
   include workstation::arch::social
+  include workstation::arch::system
   include workstation::arch::terminal
+  include workstation::arch::web_browsers
   include workstation::arch::window_managers
 }

@@ -6,6 +6,7 @@ class workstation::arch::fonts {
   ]
 
   package { $aur:
-    ensure => installed,
+    ensure   => installed,
+    provider => aur,
   }
 }

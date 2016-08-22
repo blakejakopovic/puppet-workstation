@@ -37,7 +37,7 @@
 
 class workstation (
 
-  $default_user  = $::workstation::default_user,
+  $default_user,
   $dotfiles_repo = false,
 
 ) {
@@ -46,10 +46,13 @@ class workstation (
     fail('default_user cannot be root user')
   }
 
+  user { 'default_user':
+    name       => $default_user,
+    managehome => true,
+  }
+
   if $::osfamily == 'Archlinux' {
-    class { 'workstation::arch':
-      default_user => $default_user,
-    }
+    include workstation::arch
   }
 
   if $::osfamily == 'Darwin' {

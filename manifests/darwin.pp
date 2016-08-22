@@ -9,8 +9,9 @@ class workstation::darwin (
   }
 
   class { '::homebrew':
-    user  => $default_user,
-    group => 'admin',
+    user    => $default_user,
+    group   => 'admin',
+    require => User['default_user'],
   }
 
   package { 'homebrew/dupes':
