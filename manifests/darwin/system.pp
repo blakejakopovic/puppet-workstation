@@ -26,14 +26,4 @@ class workstation::darwin::system {
     provider => brew,
     require  => Package['homebrew/dupes'],
   }
-
-  $casks = [
-    'flux',
-    'keepingyouawake',
-  ]
-
-  package { $casks:
-    ensure   => installed,
-    provider => brewcask,
-  }
 }
