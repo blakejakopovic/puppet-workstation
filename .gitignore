@@ -2,12 +2,9 @@ spec/fixtures
 .bundle/
 .vagrant
 *.swp
-log
+log/
 Gemfile.lock
-Puppetfile.lock
-.librarian/
 .tmp/
-spec/*acceptance*
 coverage/
 TODO
 pkg/
