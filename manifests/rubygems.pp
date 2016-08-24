@@ -11,5 +11,6 @@ class workstation::rubygems {
   package { $gems:
     ensure   => installed,
     provider => gem,
+    require  => Package['ruby'],
   }
 }

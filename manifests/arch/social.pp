@@ -8,12 +8,4 @@ class workstation::arch::social {
   package { $packages:
     ensure => installed,
   }
-
-  $aur = [
-    'discord',
-  ]
-
-  package { $aur:
-    ensure   => installed,
-  }
 }

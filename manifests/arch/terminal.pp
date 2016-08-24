@@ -25,13 +25,4 @@ class workstation::arch::terminal {
   package { $packages:
     ensure => installed,
   }
-
-  $aur = [
-    'base16-git',
-    'command-not-found',
-  ]
-
-  package { $aur:
-    ensure   => installed,
-  }
 }

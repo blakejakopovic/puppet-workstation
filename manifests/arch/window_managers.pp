@@ -17,13 +17,4 @@ class workstation::arch::window_managers {
   package { $packages:
     ensure => installed,
   }
-
-  $aur = [
-    'arc-icon-theme',
-    'gtk-theme-arc',
-  ]
-
-  package { $aur:
-    ensure   => installed,
-  }
 }

@@ -4,8 +4,7 @@
 # This class automatically includes workstation specific 
 # classes, based on operating system. Currently it supports
 # both Arch Linux and Darwin (macOS). It is designed to 
-# setup system shared applications, as well as setup the 
-# default user account.
+# setup system shared packages and applications.
 #
 # Parameters
 # ----------
@@ -21,7 +20,6 @@
 # @example
 #   class { 'workstation':
 #     default_user  => 'blake',
-#     dotfiles_repo => 'https://github.com/blakejakopovic/dotfiles',
 #   }
 #
 # Authors
@@ -38,7 +36,6 @@
 class workstation (
 
   $default_user,
-  $dotfiles_repo = false,
 
 ) {
 
@@ -46,27 +43,19 @@ class workstation (
     fail('default_user cannot be root user')
   }
 
-  user { $default_user:
-    managehome => true,
-  }
-
   if $::osfamily == 'Archlinux' {
     include workstation::arch
+    include workstation::pips
+    include workstation::rubygems
   }
-
-  if $::osfamily == 'Darwin' {
+  elsif $::osfamily == 'Darwin' {
     class { 'workstation::darwin':
       default_user => $default_user,
     }
+    include workstation::pips
+    include workstation::rubygems
   }
-
-  if $dotfiles_repo {
-    class { 'workstation::dotfiles':
-      default_user  => $default_user,
-      dotfiles_repo => $dotfiles_repo,
-    }
+  else {
+    fail( "${::operatingsystem} is an unsupported operating system" )
   }
-
-  include workstation::pips
-  include workstation::rubygems
 }

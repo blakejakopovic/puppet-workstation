@@ -1,6 +1,6 @@
 # Puppet Workstation
 
-Automated workstation setup and configuration module for both Arch Linux, and macOS (Darwin) systems. It manages common system packages, Python pip packages, Rubygems, and installs user dotfiles.
+Automated workstation setup and configuration module for both Arch Linux, and macOS (Darwin) systems. It manages common system packages, Python pip packages, and Rubygems.
 
 This module was designed to support standalone puppet compilations, where no Puppet master is required. However, there is no reason why it can't also be used by a Puppet master to keep systems in check.
 
@@ -33,10 +33,12 @@ This module includes configuration, packages, and services including:
 ### Setup Requirements
 
 macOS requires the following to be installed:
+* default_user must already exist
 * [Homebrew](http://brew.sh)
 * Xcode Command Line Tools (`xcode-select --install`)
 
 Arch Linux requires:
+* default_user must already exist
 * [aurget](https://aur.archlinux.org/packages/aurget/)
 ```
 cd /tmp
@@ -64,7 +66,6 @@ When using a Puppet server
 node 'my.workstation.net' {
   class { 'workstation':
     default_user  => 'blake',
-    dotfiles_repo => 'https://github.com/blakejakopovic/dotfiles',
   }
 }
 ```

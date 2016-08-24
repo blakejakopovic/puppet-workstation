@@ -15,7 +15,6 @@ describe 'workstation::arch' do
 
     it { should contain_class('workstation::arch::developer') }
     it { should contain_class('workstation::arch::filesystems') }
-    it { should contain_class('workstation::arch::fonts') }
     it { should contain_class('workstation::arch::media') }
     it { should contain_class('workstation::arch::monitoring') }
     it { should contain_class('workstation::arch::networking') }

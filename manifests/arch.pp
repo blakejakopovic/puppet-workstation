@@ -6,7 +6,6 @@ class workstation::arch {
 
   include workstation::arch::developer
   include workstation::arch::filesystems
-  include workstation::arch::fonts
   include workstation::arch::media
   include workstation::arch::monitoring
   include workstation::arch::networking
