@@ -34,6 +34,7 @@ class workstation::darwin::developer {
     'docker',
     'github-desktop',
     'gitup',
+    'hex-fiend',
     'iterm2',
     'lighttable',
     'pgadmin3',

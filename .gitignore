@@ -8,3 +8,5 @@ Gemfile.lock
 coverage/
 TODO
 pkg/
+.travis.yml
+lib/
