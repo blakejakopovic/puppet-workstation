@@ -23,15 +23,15 @@ class workstation::darwin (
     provider => tap,
   }
 
-  include workstation::darwin::developer
-  include workstation::darwin::filesystems
-  include workstation::darwin::media
-  include workstation::darwin::monitoring
-  include workstation::darwin::networking
-  include workstation::darwin::productivity
-  include workstation::darwin::social
-  include workstation::darwin::system
-  include workstation::darwin::terminal
-  include workstation::darwin::utilities
-  include workstation::darwin::web_browsers
+  include ::workstation::darwin::developer
+  include ::workstation::darwin::filesystems
+  include ::workstation::darwin::media
+  include ::workstation::darwin::monitoring
+  include ::workstation::darwin::networking
+  include ::workstation::darwin::productivity
+  include ::workstation::darwin::social
+  include ::workstation::darwin::system
+  include ::workstation::darwin::terminal
+  include ::workstation::darwin::utilities
+  include ::workstation::darwin::web_browsers
 }

@@ -17,9 +17,6 @@ describe 'workstation' do
     end
 
     it { is_expected.to contain_class('workstation::arch') }
-    
-    it { should contain_class('workstation::pips') }
-    it { should contain_class('workstation::rubygems') }
     it { should_not contain_class('workstation::darwin') }
   end
 
@@ -34,9 +31,6 @@ describe 'workstation' do
                     
     it { is_expected.to contain_class('workstation::darwin').with(
           'default_user' => 'iamauser' ) }
-    
-    it { should contain_class('workstation::pips') }
-    it { should contain_class('workstation::rubygems') }
     it { should_not contain_class('workstation::arch') }
   end
 

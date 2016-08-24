@@ -1,6 +1,6 @@
 # Puppet Workstation
 
-Automated workstation setup and configuration module for both Arch Linux, and macOS (Darwin) systems. It manages common system packages, Python pip packages, and Rubygems.
+Automated workstation setup and configuration module for both Arch Linux, and macOS (Darwin) systems.
 
 This module was designed to support standalone puppet compilations, where no Puppet master is required. However, there is no reason why it can't also be used by a Puppet master to keep systems in check.
 

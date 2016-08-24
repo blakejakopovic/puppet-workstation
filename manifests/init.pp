@@ -44,16 +44,12 @@ class workstation (
   }
 
   if $::osfamily == 'Archlinux' {
-    include workstation::arch
-    include workstation::pips
-    include workstation::rubygems
+    include ::workstation::arch
   }
   elsif $::osfamily == 'Darwin' {
-    class { 'workstation::darwin':
+    class { '::workstation::darwin':
       default_user => $default_user,
     }
-    include workstation::pips
-    include workstation::rubygems
   }
   else {
     fail( "${::operatingsystem} is an unsupported operating system" )
