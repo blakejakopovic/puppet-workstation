@@ -1,6 +1,6 @@
 # Puppet Workstation
 
-Automated workstation setup and configuration module for both Arch Linux, and macOS (Darwin) systems. Works best with system specific puppet module (ie. macbook), and personal dotfiles.
+Automated workstation setup and configuration module for both Arch Linux, and macOS (Darwin) systems. Works best with hardware specific puppet modules (ie. macbook), and personal dotfiles.
 
 This module was designed to support standalone puppet compilations, where no Puppet master is required. However, there is no reason why it can't also be used by a Puppet master to keep systems in check.
 
